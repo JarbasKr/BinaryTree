@@ -4,10 +4,12 @@
 
 #include <iostream>
 #include <fstream>
+#include "arvore.h"
 using namespace std;
 
 
 int main() {
+    ArvoreBinaria arvore = ArvoreBinaria();
     string v1, v2, v3, arquivo;
     
     cout << "Insira o nome do arquivo a ser lido: ";
