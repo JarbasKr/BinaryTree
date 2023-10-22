@@ -18,6 +18,7 @@ int main() {
     ifstream lerInput(arquivo, ios::in);
     while(lerInput >> v1 >> v2 >> v3) {
         cout << v1 << " - " << v2 << " - " << v3 << endl;
+        arvore.Inserir(v1, v2, v3);
     }
 
     return 0;

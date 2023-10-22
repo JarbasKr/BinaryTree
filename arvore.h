@@ -21,8 +21,8 @@ class ArvoreBinaria {
             string entrada;
             NoArvore *noEsquerdo, *noDireito;
         };
-        typedef NoArvore *PonteiroArv;
-        PonteiroArv BuscarNo(string s, PonteiroArv &a);
+        typedef NoArvore* PonteiroArv;
+        bool BuscarNo(string s, PonteiroArv &noBusca, PonteiroArv &noInsercao);
         PonteiroArv raiz;
 };
 
