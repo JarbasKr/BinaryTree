@@ -1,3 +1,7 @@
+// Alunos:
+// Leonardo Franzin Ribeiro - 2108237
+// Jarbas o terceiro -
+
 #include "arvore.h"
 
 // Pré-condição: Nenhuma
@@ -14,7 +18,6 @@ ArvoreBinaria::~ArvoreBinaria() {}
 // Pós-condição: Adiciona as entradas na árvore. Caso a árvore esteja vazia, começa na raiz.
 void ArvoreBinaria::Inserir(string s1, string s2, string s3) {
     if(s1 == "X") {
-        cout << "Linha final do arquivo." << endl;
         return;
     }
 
@@ -70,9 +73,43 @@ bool ArvoreBinaria::BuscarNo(string s, PonteiroArv &noBusca, PonteiroArv &noInse
     if(noBusca->noEsquerdo != NULL)
         e = BuscarNo(s, noBusca->noEsquerdo, noInsercao);
 
-    if(d == true || d == true) {
+    if(d == true || e == true) {
         return true;
     } else {
         return false;
+    }
+}
+
+void ArvoreBinaria::Listar(int &nos, int &folhas) {
+    Listar(raiz, nos, folhas);
+}
+
+void ArvoreBinaria::Listar(PonteiroArv p, int &nos, int &folhas) {
+    if(p != NULL) {
+        int filhos = 0;
+        string statusFilhos = "";
+        if(p->noEsquerdo != NULL) {
+            filhos++;
+            statusFilhos.append("E");
+        }
+        if(p->noDireito != NULL) {
+            filhos++;
+            statusFilhos.append("D");
+        }
+
+        if(filhos == 0) {
+            statusFilhos = "F";
+            folhas++;
+        }
+
+        nos++;
+
+        cout << p->entrada << " " << filhos << " " << statusFilhos << endl;
+        Listar(p->noEsquerdo, nos, folhas);
+        Listar(p->noDireito, nos, folhas);
+    }
+
+    if(p == raiz) {
+        cout << nos << " " << folhas << "\n";
     }
 }

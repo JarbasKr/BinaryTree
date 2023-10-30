@@ -13,8 +13,7 @@ class ArvoreBinaria {
         ArvoreBinaria();
         ~ArvoreBinaria();
         void Inserir(string chave1, string chave2, string chave3);
-        void Deletar(string s);
-        bool Procurar(string s);
+        void Listar(int &nos, int &folhas);
 
     private:
         struct NoArvore {
@@ -24,6 +23,7 @@ class ArvoreBinaria {
         typedef NoArvore* PonteiroArv;
         bool BuscarNo(string s, PonteiroArv &noBusca, PonteiroArv &noInsercao);
         PonteiroArv raiz;
+        void Listar(PonteiroArv p, int &nos, int &folhas);
 };
 
 #endif
