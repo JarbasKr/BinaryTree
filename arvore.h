@@ -1,6 +1,6 @@
 // Alunos:
 // Leonardo Franzin Ribeiro - 2108237
-// Jarbas o terceiro - 
+// Jarbas Frederico Krempel - 2119729
 
 #ifndef ARVORE_H
 #define ARVORE_H
