@@ -84,6 +84,10 @@ void ArvoreBinaria::Listar(int &nos, int &folhas) {
     Listar(raiz, nos, folhas);
 }
 
+// Pré-condição: A árvore foi criada.
+// Pós-condição: Iterar recursivamente pela árvore e classificar os valores como Nó esquerdo, direito e folha.
+// Caso o PonteiroArv p seja diferente de NULL, realizar a classificação, junto com a contagem de filhos, folhas e nós. Ao final, é realizado a recursão que percorrerá a árvore.
+// Caso o PonteiroArv p seja igual a Raiz, escrever na tela os nós com as folhas.
 void ArvoreBinaria::Listar(PonteiroArv p, int &nos, int &folhas) {
     if(p != NULL) {
         int filhos = 0;
